@@ -1,0 +1,31 @@
+{
+  "name": "react-native-hidden-header",
+  "version": "0.1.1",
+  "author": "matheushf",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "keywords": [
+    "react-native",
+    "react-native-hidden-header"
+  ],
+  "scripts": {
+    "flow": "flow",
+    "lint": "eslint . --ext .js"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "1.9.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-inline-dotenv": "^1.2.2",
+    "babel-preset-expo": "^5.1.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-native": "^3.6.0",
+    "flow-bin": "^0.95.1"
+  }
+}

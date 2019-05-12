@@ -1,0 +1,9 @@
+node_modules/**/*
+.expo/**/*
+functions/node_modules/**/*
+functions/lib
+build/
+log/
+/tests/
+/coverage/
+package-lock.json

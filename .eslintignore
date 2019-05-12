@@ -1,0 +1,8 @@
+/build/
+/config/
+/dist/
+/*.js
+/tests/unit/coverage/
+aws-exports.js
+CameraREF.js
+/coverage
