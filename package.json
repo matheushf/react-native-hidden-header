@@ -8,6 +8,10 @@
     "react-native",
     "react-native-hidden-header"
   ],
+  "files": [
+    "src/index.js",
+    "src/style.js"
+  ],
   "scripts": {
     "flow": "flow",
     "lint": "eslint . --ext .js"
