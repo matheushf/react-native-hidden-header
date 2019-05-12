@@ -1,4 +1,4 @@
-# React Native Swipe Hidden Header
+# React Native Hidden Header
 ![npm version](https://img.shields.io/npm/v/react-native-hidden-header.svg?style=flat-square)
 
 A component that hides the header as you swipe up and down.
