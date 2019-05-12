@@ -1,30 +1,36 @@
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, TouchableOpacity } from 'react-native';
-import SwipeHiddenHeader from './src'
+import {
+  StyleSheet, Text, View, StatusBar, TouchableOpacity
+} from 'react-native';
+import HiddenHeader from 'react-native-hidden-header';
 
-export default function Normal(props){
+export default function Normal(props) {
   return (
-    <SwipeHiddenHeader
-      header={()=> <View style={styles.header}><Text style={styles.headerText}>Normal</Text></View>}
+    <HiddenHeader
+      header={() => (
+        <View style={styles.header}><Text style={styles.headerText}>HiddenHeader</Text></View>
+      )}
     >
       <StatusBar
         barStyle="light-content"
       />
-      <TouchableOpacity onPress={()=> props.changeType('custom')} style={styles.block}>
+
+      <TouchableOpacity onPress={() => props.changeType('custom')} style={styles.block}>
         <Text>Tap here to Custom list view</Text>
       </TouchableOpacity>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-      <View style={styles.block}></View>
-    </SwipeHiddenHeader>
-  )
+
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+      <View style={styles.block} />
+    </HiddenHeader>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -34,13 +40,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  header:{
+  header: {
     height: 64,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(34,34,34,.8)'
   },
-  headerText:{
+  headerText: {
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold'

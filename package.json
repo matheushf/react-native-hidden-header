@@ -16,6 +16,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
+    "react-native": "^0.59.8",
     "babel-preset-react-native": "1.9.1",
     "babel-eslint": "^10.0.1",
     "babel-plugin-inline-dotenv": "^1.2.2",
