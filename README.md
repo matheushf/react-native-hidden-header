@@ -3,6 +3,7 @@
 
 A component that hides the header as you swipe up and down.
 
+![animated](https://user-images.githubusercontent.com/16087712/60230737-55cf0a80-986d-11e9-81d1-08870d1c16cb.gif)
 
 ### Installation
 
