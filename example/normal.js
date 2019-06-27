@@ -1,60 +1,51 @@
 import React from 'react';
+import { Constants } from 'expo';
 import {
-  StyleSheet, Text, View, StatusBar, TouchableOpacity
+  RefreshControl, View, Text
 } from 'react-native';
 import HiddenHeader from 'react-native-hidden-header';
 
-export default function Normal(props) {
-  return (
-    <HiddenHeader
-      header={() => (
-        <View style={styles.header}><Text style={styles.headerText}>HiddenHeader</Text></View>
-      )}
-    >
-      <StatusBar
-        barStyle="light-content"
-      />
+export default class Normal extends React.Component {
+  static navigationOptions = {
+    header: null,
+  };
 
-      <TouchableOpacity onPress={() => props.changeType('custom')} style={styles.block}>
-        <Text>Tap here to Custom list view</Text>
-      </TouchableOpacity>
+  _renderItems() {
+    const items = new Array(40).fill(0);
 
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-      <View style={styles.block} />
-    </HiddenHeader>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    height: 64,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'rgba(34,34,34,.8)'
-  },
-  headerText: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: 'bold'
-  },
-  block: {
-    margin: 15,
-    backgroundColor: '#1ac964',
-    height: 100,
-    borderRadius: 5
+    return items.map((item, index) => (
+      <View style={{ borderBottomColor: 'grey', borderBottomWidth: 1, padding: 15 }} key={index}>
+        <Text>Item</Text>
+      </View>
+    ));
   }
-});
+
+  render() {
+    return (
+      <HiddenHeader
+        header={() => (
+          <View style={{
+            flex: 1,
+            flexDirection: 'row',
+            justifyContent: 'center',
+            padding: 20,
+            paddingTop: 20 + Constants.statusBarHeight,
+            backgroundColor: '#430958'
+          }}
+          >
+            <Text style={{ color: 'white' }}>Header</Text>
+          </View>
+        )}
+        refreshControl={(
+          <RefreshControl
+            onRefresh={() => {}}
+          />
+        )}
+      >
+        <View>
+          {this._renderItems()}
+        </View>
+      </HiddenHeader>
+    );
+  }
+}

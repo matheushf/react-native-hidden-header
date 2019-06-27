@@ -23,6 +23,10 @@ $ yarn add react-native-hidden-header
 Use internal scrollView:
 
 ```jsx
+import HiddenHeader from 'react-native-hidden-header';
+
+[...]
+
 render() {
     return (
       <HiddenHeader
@@ -47,6 +51,8 @@ render() {
     );
   }
 ```
+
+You can find the gif example under [example/normal.js](https://github.com/matheushf/react-native-hidden-header/blob/master/example/normal.js):
 
 ### Props
 
